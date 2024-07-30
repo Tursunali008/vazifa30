@@ -58,6 +58,9 @@ class _AddEditProductPageState extends State<AddEditProductPage> {
                   return null;
                 },
               ),
+              const SizedBox(
+                height: 20,
+              ),
               TextFormField(
                 controller: _descriptionController,
                 decoration: const InputDecoration(
@@ -70,6 +73,9 @@ class _AddEditProductPageState extends State<AddEditProductPage> {
                   }
                   return null;
                 },
+              ),
+              const SizedBox(
+                height: 20,
               ),
               TextFormField(
                 controller: _priceController,

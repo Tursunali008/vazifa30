@@ -6,7 +6,7 @@ import 'package:vazifa30/screen/add_product_screen.dart';
 import 'package:vazifa30/screen/product_deteils.dart';
 import '../../bloc/product_bloc.dart';
 import '../../bloc/product_event.dart';
-import '../../bloc/product_state.dart'; 
+import '../../bloc/product_state.dart';
 
 class ProductPage extends StatelessWidget {
   const ProductPage({super.key});
@@ -15,13 +15,9 @@ class ProductPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: const Icon(Icons.menu),
         title: const Text('Online Shop'),
+        backgroundColor: Colors.blue,
         centerTitle: true,
-        actions: [
-          IconButton(
-              onPressed: () {}, icon: const Icon(CupertinoIcons.shopping_cart))
-        ],
       ),
       body: BlocBuilder<ProductBloc, ProductState>(
         builder: (context, state) {
@@ -119,8 +115,9 @@ class ProductPage extends StatelessWidget {
         },
       ),
       floatingActionButton: FloatingActionButton(
-        shape: const CircleBorder(),
-        backgroundColor: Colors.black,
+        shape: const RoundedRectangleBorder(
+            borderRadius: BorderRadius.all(Radius.circular(20))),
+        backgroundColor: Colors.blue,
         onPressed: () {
           Navigator.push(
             context,
